@@ -10,3 +10,7 @@ V99999Z:
 S9999Z:
   usability: "on"
   processable: true
+
+PMT9999:
+  usability: "on"
+  processable: true

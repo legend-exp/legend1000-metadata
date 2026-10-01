@@ -5,7 +5,7 @@ V99999Z:
     string: 1
     position: 1
   daq:
-    rawid: 1
+    rawid: 1000000
 
 S9999Z:
   name: S9999Z
@@ -15,4 +15,19 @@ S9999Z:
     fiber: S9999
     position: top
   daq:
-    rawid: 5000
+    rawid: 2000000
+
+PMT9999:
+  name: PMT9999
+  system: pmts
+  location:
+    name: wall
+    x: 1
+    y: 2
+    z: 3
+    direction:
+      nx: 1
+      ny: 2
+      nz: 3
+  daq:
+    rawid: 3000000
