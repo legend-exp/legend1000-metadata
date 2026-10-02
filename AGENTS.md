@@ -20,6 +20,8 @@ which clones and sets up the repository on the caller's behalf.
 - `hardware/`
   - `configuration/channelmaps/` → the channel map: one entry per readout
     channel, keyed by detector name, holding `system`, `location` and `daq`
+  - `configuration/opvs/` → the operational voltage of each HPGe detector
+    (`operational_voltage_in_V`), keyed by detector name
   - `detectors/germanium/diodes/` → one YAML per HPGe detector (`production`,
     `geometry`, `characterization`)
   - `detectors/germanium/crystals/` → one YAML per crystal (impurity profile,
@@ -30,7 +32,7 @@ which clones and sets up the repository on the caller's behalf.
   - `geom/` → the simulated geometry, built by
     [legend-pygeom-l1000](https://github.com/legend-exp/legend-pygeom-l1000)
   - `pars/<exp>/geds/` → simulation parameters for the HPGe detectors
-    (`aoeresmod`, `currmod`, `elecmod`, `eresmod`, `opv`, `psdcuts`, `ssd`)
+    (`aoeresmod`, `currmod`, `elecmod`, `eresmod`, `psdcuts`, `ssd`)
   - `tier/<exp>/` → settings for each tier of the Simflow (`stp`, `opt`, `hit`,
     `cvt`, `evt`, `pdf`)
 
