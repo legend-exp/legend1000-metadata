@@ -1,6 +1,9 @@
 dead_layer_fraction: 0.5
 buffer_len: 500*MB
 simulate_psd_with_psl: true
+simulate_psd: true
+tune_hpge_impurities_on_data: false
+two_pass_aoe_correction: false
 
 eresmod_default:
   expression: FWHMLinear

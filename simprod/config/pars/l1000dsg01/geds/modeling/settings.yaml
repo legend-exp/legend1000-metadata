@@ -1,0 +1,3 @@
+# minimum operational-voltage margin above depletion (in V) required for an HPGe
+# to be eligible for drift-time map and current-pulse model generation
+min_voltage_above_depletion_in_V: 100

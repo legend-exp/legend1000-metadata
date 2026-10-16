@@ -32,9 +32,9 @@ which clones and sets up the repository on the caller's behalf.
   - `geom/` → the simulated geometry, built by
     [legend-pygeom-l1000](https://github.com/legend-exp/legend-pygeom-l1000)
   - `pars/<exp>/geds/` → simulation parameters for the HPGe detectors
-    (`aoeresmod`, `currmod`, `elecmod`, `eresmod`, `psdcuts`, `ssd`)
-  - `tier/<exp>/` → settings for each tier of the Simflow (`stp`, `opt`, `hit`,
-    `cvt`, `evt`, `pdf`)
+    (`aoeresmod`, `currmod`, `elecmod`, `eresmod`, `modeling`, `psdcuts`, `ssd`)
+  - `tier/<exp>/` → settings for each tier of the Simflow (`vtx`, `stp`, `opt`,
+    `hit`, `cvt`, `evt`, `pdf`)
 
 ## Dummy records
 
