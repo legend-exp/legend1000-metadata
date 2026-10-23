@@ -25,13 +25,13 @@ the activity of the decays simulated in it, written as either:
 - `{ limit, cl }`: upper limit and its confidence level (e.g. `0.9`).
 
 ```yaml
-neutron_moderator:
-  description: Neutron Moderator (PMMA)
+wls_reflector:
+  description: Reflectors (Tetratex/TPB)
   reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 7000
-  specific_activity_in_uBq_per_kg:
-    neutron_moderator_Pb214_to_Po214: { val: 16, unc: 6 }
-    neutron_moderator_Pb212_to_Pb208: { limit: 28, cl: 0.9 }
+  area_in_m2: 36
+  specific_activity_in_uBq_per_m2:
+    wls_reflector_Pb214_to_Po214: { val: 78, unc: 30 }
+    wls_reflector_Pb212_to_Pb208: { limit: 12, cl: 0.9 }
 ```
 
 A simulation that stands for several components (e.g. the HV clamps, for the
