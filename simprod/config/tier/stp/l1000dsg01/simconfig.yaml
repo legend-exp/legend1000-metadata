@@ -49,7 +49,7 @@ hpge_icpc_bulk_Co60:
   number_of_jobs: 7
 
 liquid_argon_atmospheric_Ar39:
-  template: $_/templates/underground_lar_edep.mac
+  template: $_/templates/default.mac
   generator: ~defines:Ar39
   confinement: ~defines:lar_atmospheric
   primaries_per_job: 18_000_000

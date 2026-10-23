@@ -11,8 +11,8 @@ lar_closer_to_array:
   - /RMG/Generator/Confinement/Geometrical/Cylinder/OuterRadius 1.5 m
   - /RMG/Generator/Confinement/Geometrical/Cylinder/Height 3 m
 
-# atmospheric LAr within ~0.5 m of the re-entrance tube (outer r 0.999 m,
-# bottom z -1.26 m) up to 0.5 m above the top of the UAr optical map (z 1.375 m)
+# atmospheric LAr at most 0.5 m from the HPGe array (r < 0.814 m, z from -0.888
+# m to 0.183 m)
 lar_atmospheric:
   - /RMG/Generator/Confine Volume
   - /RMG/Generator/Confinement/SamplingMode IntersectPhysicalWithGeometrical
@@ -20,7 +20,7 @@ lar_atmospheric:
   - /RMG/Generator/Confinement/Geometrical/AddSolid Cylinder
   - /RMG/Generator/Confinement/Geometrical/CenterPositionX 0 m
   - /RMG/Generator/Confinement/Geometrical/CenterPositionY 0 m
-  - /RMG/Generator/Confinement/Geometrical/CenterPositionZ 0.05 m
+  - /RMG/Generator/Confinement/Geometrical/CenterPositionZ -0.35 m
   - /RMG/Generator/Confinement/Geometrical/Cylinder/InnerRadius 0 m
-  - /RMG/Generator/Confinement/Geometrical/Cylinder/OuterRadius 1.5 m
-  - /RMG/Generator/Confinement/Geometrical/Cylinder/Height 3.7 m
+  - /RMG/Generator/Confinement/Geometrical/Cylinder/OuterRadius 1.32 m
+  - /RMG/Generator/Confinement/Geometrical/Cylinder/Height 2.08 m
