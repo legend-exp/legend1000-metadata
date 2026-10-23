@@ -12,13 +12,6 @@ Pb212_to_Pb208:
   - /gps/ion 82 212
   - /process/had/rdm/nucleusLimits 208 212 81 83
 
-Ra228_to_Ac228:
-  - /RMG/Generator/Select GPS
-  - /gps/particle ion
-  - /gps/energy 0 eV
-  - /gps/ion 89 228
-  - /process/had/rdm/nucleusLimits 228 228 88 89
-
 K42:
   - /RMG/Generator/Select GPS
   - /gps/particle ion
