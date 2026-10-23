@@ -82,9 +82,15 @@ ultem_insulators_Pb212_to_Pb208:
   primaries_per_job: 600_000
   number_of_jobs: 17
 
-ultem_clamps_Pb212_to_Pb208:
+hv_clamps_Pb212_to_Pb208:
   <<: *Th228
-  confinement: ~volumes.bulk:hpge_assembly_clamp_.*_ultem_.*
+  confinement: ~volumes.bulk:hpge_assembly_clamp_hv_ultem_.*
+  primaries_per_job: 600_000
+  number_of_jobs: 17
+
+signal_clamps_Pb212_to_Pb208:
+  <<: *Th228
+  confinement: ~volumes.bulk:hpge_assembly_clamp_signal_ultem_.*
   primaries_per_job: 600_000
   number_of_jobs: 17
 
@@ -161,9 +167,15 @@ ultem_insulators_Pb214_to_Po214:
   primaries_per_job: 600_000
   number_of_jobs: 17
 
-ultem_clamps_Pb214_to_Po214:
+hv_clamps_Pb214_to_Po214:
   <<: *U238
-  confinement: ~volumes.bulk:hpge_assembly_clamp_.*_ultem_.*
+  confinement: ~volumes.bulk:hpge_assembly_clamp_hv_ultem_.*
+  primaries_per_job: 600_000
+  number_of_jobs: 17
+
+signal_clamps_Pb214_to_Po214:
+  <<: *U238
+  confinement: ~volumes.bulk:hpge_assembly_clamp_signal_ultem_.*
   primaries_per_job: 600_000
   number_of_jobs: 17
 
