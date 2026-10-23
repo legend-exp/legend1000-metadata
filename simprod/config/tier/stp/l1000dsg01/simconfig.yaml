@@ -48,6 +48,20 @@ hpge_icpc_bulk_Co60:
   primaries_per_job: 1_500_000
   number_of_jobs: 7
 
+hpge_icpc_bulk_Pb212_to_Pb208:
+  template: $_/templates/default.mac
+  generator: ~defines:Pb212_to_Pb208
+  confinement: ~volumes.bulk:V\d+Z
+  primaries_per_job: 1_000_000
+  number_of_jobs: 10
+
+hpge_icpc_bulk_Pb214_to_Po214:
+  template: $_/templates/default.mac
+  generator: ~defines:Pb214_to_Po214
+  confinement: ~volumes.bulk:V\d+Z
+  primaries_per_job: 1_000_000
+  number_of_jobs: 10
+
 liquid_argon_atmospheric_Ar39:
   template: $_/templates/default.mac
   generator: ~defines:Ar39
