@@ -1,0 +1,137 @@
+cables:
+  description: Cabling - HV & Signal
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 0.4
+  specific_activity_in_uBq_per_kg:
+    cables_Pb214_to_Po214: { val: 107, unc: 45 }
+    cables_Pb212_to_Pb208: { val: 81, unc: 57 }
+
+detector_mount_efcu:
+  description: Detector Mount (EFCu)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 33.8
+  specific_activity_in_uBq_per_kg:
+    hpge_support_copper_Pb214_to_Po214: { val: 0.19, unc: 0.10 }
+    hpge_support_copper_Pb212_to_Pb208: { val: 0.37, unc: 0.22 }
+
+detector_mount_ultem:
+  description: Detector Mount (Ultem)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 0.4
+  specific_activity_in_uBq_per_kg:
+    ultem_insulators_Pb214_to_Po214: { val: 83, unc: 113 }
+    ultem_insulators_Pb212_to_Pb208: { val: 140, unc: 20 }
+
+optical_fibers:
+  description: Optical Fibers
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 15.0
+  specific_activity_in_uBq_per_kg:
+    fibers_Pb214_to_Po214: { val: 540, unc: 80 }
+    fibers_Pb212_to_Pb208: { val: 330, unc: 80 }
+
+front_end_asic:
+  description: Front End ASIC
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 0.00013
+  specific_activity_in_uBq_per_kg:
+    front_end_electronics_Pb214_to_Po214: { limit: 12000, cl: 0.9 }
+    front_end_electronics_Pb212_to_Pb208: { limit: 8100, cl: 0.9 }
+
+pen_plates:
+  description: PEN Plates (PEN)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 2.0
+  specific_activity_in_uBq_per_kg:
+    pen_plates_Pb214_to_Po214: { val: 65, unc: 12 }
+    pen_plates_Pb212_to_Pb208: { val: 97, unc: 21 }
+
+hv_connector_ultem:
+  description: HV Connector (Ultem)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 0.04
+  specific_activity_in_uBq_per_kg:
+    hv_clamps_Pb214_to_Po214: { val: 83, unc: 113 }
+    hv_clamps_Pb212_to_Pb208: { val: 140, unc: 20 }
+
+hv_connector_phbr:
+  description: HV Connector (Ph-Br)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 0.10
+  specific_activity_in_uBq_per_kg:
+    hv_clamps_Pb214_to_Po214: { val: 134, unc: 4 }
+    hv_clamps_Pb212_to_Pb208: { val: 25, unc: 17 }
+
+fe_mount_ultem:
+  description: FE Mount (Ultem)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 0.08
+  specific_activity_in_uBq_per_kg:
+    signal_clamps_Pb214_to_Po214: { val: 83, unc: 113 }
+    signal_clamps_Pb212_to_Pb208: { val: 140, unc: 20 }
+
+fe_mount_phbr:
+  description: FE Mount (Ph-Br)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 0.10
+  specific_activity_in_uBq_per_kg:
+    signal_clamps_Pb214_to_Po214: { val: 134, unc: 4 }
+    signal_clamps_Pb212_to_Pb208: { val: 25, unc: 17 }
+
+sipms:
+  description: SiPMs
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  number_of_pieces: 252
+  activity_per_piece_in_uBq:
+    sipm_arrays_Pb214_to_Po214: { limit: 0.6, cl: 0.9 }
+    sipm_arrays_Pb212_to_Pb208: { limit: 0.1, cl: 0.9 }
+
+cable_connectors:
+  description: Connectors (Various)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  number_of_pieces: 336
+  activity_per_piece_in_uBq:
+    cable_connectors_Pb214_to_Po214: { val: 0.05, unc: 0.09 }
+    cable_connectors_Pb212_to_Pb208: { val: 0.07, unc: 0.15 }
+
+neutron_moderator:
+  description: Neutron Moderator (PMMA)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 7000
+  specific_activity_in_uBq_per_kg:
+    neutron_moderator_Pb214_to_Po214: { val: 16, unc: 6 }
+    neutron_moderator_Pb212_to_Pb208: { limit: 28, cl: 0.9 }
+
+reentrance_tube_efcu:
+  description: RE Vessel (EFCu)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 194
+  specific_activity_in_uBq_per_kg:
+    reentrance_tube_efcu_Pb214_to_Po214: { val: 0.19, unc: 0.10 }
+    reentrance_tube_efcu_Pb212_to_Pb208: { val: 0.37, unc: 0.22 }
+
+reentrance_tube_ofhc:
+  description: RE Vessel (Comm. Cu)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 641
+  specific_activity_in_uBq_per_kg:
+    reentrance_tube_ofhc_Pb214_to_Po214: { val: 1250, unc: 370 }
+    reentrance_tube_ofhc_Pb212_to_Pb208: { val: 83, unc: 25 }
+
+wls_reflector:
+  description: Reflectors (Tetratex/TPB)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  area_in_m2: 36
+  specific_activity_in_uBq_per_m2:
+    wls_reflector_Pb214_to_Po214: { val: 78, unc: 30 }
+    wls_reflector_Pb212_to_Pb208: { limit: 12, cl: 0.9 }
+
+hpge_detectors:
+  description: Ge detector material
+  reference: >-
+    LEGEND-1000 CDR v2.1, Sec. XI.B.1 (336 detectors of 3.0 kg on average) and
+    Sec. XI.B.3 (limits from Gerda; the CDR does not state the confidence level)
+  mass_in_kg: 1008
+  specific_activity_in_uBq_per_kg:
+    hpge_icpc_bulk_Pb214_to_Po214: { limit: 0.001, cl: 0.9 }
+    hpge_icpc_bulk_Pb212_to_Pb208: { limit: 0.001, cl: 0.9 }
