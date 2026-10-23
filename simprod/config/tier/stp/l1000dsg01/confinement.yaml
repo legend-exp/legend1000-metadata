@@ -11,8 +11,8 @@ lar_closer_to_array:
   - /RMG/Generator/Confinement/Geometrical/Cylinder/OuterRadius 1.5 m
   - /RMG/Generator/Confinement/Geometrical/Cylinder/Height 3 m
 
-# underground LAr at most 0.5 m from the HPGe array (r < 0.814 m, z from -0.888
-# m to 0.183 m)
+# all the underground LAr (re-entrance tube inner radius 0.9975 m, bottom at z
+# -1.259 m) up to 0.5 m above the top of the HPGe array (z 0.183 m)
 lar_underground:
   - /RMG/Generator/Confine Volume
   - /RMG/Generator/Confinement/SamplingMode IntersectPhysicalWithGeometrical
@@ -20,7 +20,7 @@ lar_underground:
   - /RMG/Generator/Confinement/Geometrical/AddSolid Cylinder
   - /RMG/Generator/Confinement/Geometrical/CenterPositionX 0 m
   - /RMG/Generator/Confinement/Geometrical/CenterPositionY 0 m
-  - /RMG/Generator/Confinement/Geometrical/CenterPositionZ -0.35 m
+  - /RMG/Generator/Confinement/Geometrical/CenterPositionZ -0.31 m
   - /RMG/Generator/Confinement/Geometrical/Cylinder/InnerRadius 0 m
-  - /RMG/Generator/Confinement/Geometrical/Cylinder/OuterRadius 1.32 m
-  - /RMG/Generator/Confinement/Geometrical/Cylinder/Height 2.08 m
+  - /RMG/Generator/Confinement/Geometrical/Cylinder/OuterRadius 1 m
+  - /RMG/Generator/Confinement/Geometrical/Cylinder/Height 2 m
