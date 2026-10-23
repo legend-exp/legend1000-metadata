@@ -11,12 +11,12 @@ lar_closer_to_array:
   - /RMG/Generator/Confinement/Geometrical/Cylinder/OuterRadius 1.5 m
   - /RMG/Generator/Confinement/Geometrical/Cylinder/Height 3 m
 
-# atmospheric LAr at most 0.5 m from the HPGe array (r < 0.814 m, z from -0.888
+# underground LAr at most 0.5 m from the HPGe array (r < 0.814 m, z from -0.888
 # m to 0.183 m)
-lar_atmospheric:
+lar_underground:
   - /RMG/Generator/Confine Volume
   - /RMG/Generator/Confinement/SamplingMode IntersectPhysicalWithGeometrical
-  - /RMG/Generator/Confinement/Physical/AddVolume liquid_argon_atmospheric
+  - /RMG/Generator/Confinement/Physical/AddVolume liquid_argon_underground
   - /RMG/Generator/Confinement/Geometrical/AddSolid Cylinder
   - /RMG/Generator/Confinement/Geometrical/CenterPositionX 0 m
   - /RMG/Generator/Confinement/Geometrical/CenterPositionY 0 m

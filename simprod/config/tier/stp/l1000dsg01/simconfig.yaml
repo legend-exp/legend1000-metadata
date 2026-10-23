@@ -62,10 +62,10 @@ hpge_icpc_bulk_Pb214_to_Po214:
   primaries_per_job: 1_500_000
   number_of_jobs: 7
 
-liquid_argon_atmospheric_Ar39:
+liquid_argon_underground_Ar39:
   template: $_/templates/default.mac
   generator: ~defines:Ar39
-  confinement: ~defines:lar_atmospheric
+  confinement: ~defines:lar_underground
   primaries_per_job: 15_000_000
   number_of_jobs: 1
 
