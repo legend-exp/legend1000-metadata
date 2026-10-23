@@ -66,8 +66,8 @@ liquid_argon_underground_Ar39:
   template: $_/templates/default.mac
   generator: ~defines:Ar39
   confinement: ~defines:lar_underground
-  primaries_per_job: 15_000_000
-  number_of_jobs: 1
+  primaries_per_job: 9_500_000
+  number_of_jobs: 20
 
 hpge_support_copper_Pb212_to_Pb208: &Th228
   template: $_/templates/default.mac
