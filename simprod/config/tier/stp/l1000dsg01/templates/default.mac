@@ -4,6 +4,14 @@
 /RMG/Geometry/RegisterDetectorsFromGDML Scintillator
 /RMG/Geometry/GDMLDisableOverlapCheck
 
+# record energy deposited in passive "dead" materials with the calorimeter
+# output scheme.
+# hpge_holding: HPGe support copper, ultem clamps & insulators, cables, cable
+# caps, ASICs (everything but the PEN plates)
+/RMG/Geometry/RegisterDetector Calorimeter hpge_(?!.*_pen).* 90000001 0 true hpge_holding
+# fiber_support: copper wraps of the SiPMs at the fiber module ends
+/RMG/Geometry/RegisterDetector Calorimeter larinstr_.*_copper.* 90000002 0 true fiber_support
+
 # name tables with ntuple
 /RMG/Output/NtupleUseVolumeName true
 

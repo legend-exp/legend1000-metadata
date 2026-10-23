@@ -4,3 +4,49 @@ Pb214_to_Po214:
   - /gps/energy 0 eV
   - /gps/ion 82 214
   - /process/had/rdm/nucleusLimits 214 214 82 83
+
+Pb212_to_Pb208:
+  - /RMG/Generator/Select GPS
+  - /gps/particle ion
+  - /gps/energy 0 eV
+  - /gps/ion 82 212
+  - /process/had/rdm/nucleusLimits 208 212 81 83
+
+Ra228_to_Ac228:
+  - /RMG/Generator/Select GPS
+  - /gps/particle ion
+  - /gps/energy 0 eV
+  - /gps/ion 89 228
+  - /process/had/rdm/nucleusLimits 228 228 88 89
+
+K42:
+  - /RMG/Generator/Select GPS
+  - /gps/particle ion
+  - /gps/energy 0 eV
+  - /gps/ion 19 42
+
+2vbb:
+  - /RMG/Generator/Select BxDecay0
+  - /RMG/Generator/BxDecay0/DoubleBetaDecay Ge76 2vbb
+
+0vbb:
+  - /RMG/Generator/Select BxDecay0
+  - /RMG/Generator/BxDecay0/DoubleBetaDecay Ge76 0vbb
+
+Ge68:
+  - /RMG/Generator/Select GPS
+  - /gps/particle ion
+  - /gps/energy 0 eV
+  - /gps/ion 32 68
+
+Co60:
+  - /RMG/Generator/Select GPS
+  - /gps/particle ion
+  - /gps/energy 0 eV
+  - /gps/ion 27 60
+
+Ar39:
+  - /RMG/Generator/Select GPS
+  - /gps/particle ion
+  - /gps/energy 0 eV
+  - /gps/ion 18 39

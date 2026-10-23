@@ -1,0 +1,43 @@
+/RMG/Manager/Randomization/Seed {SEED}
+
+/RMG/Geometry/RegisterDetectorsFromGDML Germanium
+/RMG/Geometry/RegisterDetectorsFromGDML Scintillator
+/RMG/Geometry/GDMLDisableOverlapCheck
+
+# record energy deposited in passive "dead" materials with the calorimeter
+# output scheme.
+# hpge_holding: HPGe support copper, ultem clamps & insulators, cables, cable
+# caps, ASICs (everything but the PEN plates)
+/RMG/Geometry/RegisterDetector Calorimeter hpge_(?!.*_pen).* 90000001 0 true hpge_holding
+# fiber_support: copper wraps of the SiPMs at the fiber module ends
+/RMG/Geometry/RegisterDetector Calorimeter larinstr_.*_copper.* 90000002 0 true fiber_support
+
+# name tables with ntuple
+/RMG/Output/NtupleUseVolumeName true
+
+# physics options
+/RMG/Processes/EnableGammaAngularCorrelation true
+
+/run/initialize
+
+# store everything in single precision
+/RMG/Output/Germanium/StoreSinglePrecisionPosition
+/RMG/Output/Germanium/StoreSinglePrecisionEnergy
+/RMG/Output/Scintillator/StoreSinglePrecisionPosition
+/RMG/Output/Scintillator/StoreSinglePrecisionEnergy
+/RMG/Output/Vertex/StoreSinglePrecisionPosition
+
+# store only events with energy deposition in the underground LAr (uid 10001)
+/RMG/Output/Scintillator/EdepCutLow 1 eV
+/RMG/Output/Scintillator/AddDetectorForEdepThreshold 10001
+
+# store trackid
+/RMG/Output/Germanium/StoreTrackID true
+/RMG/Output/Scintillator/StoreTrackID true
+
+$GENERATOR
+
+$CONFINEMENT
+/RMG/Generator/Confinement/MaxSamplingTrials 1000000
+
+/run/beamOn {N_EVENTS}

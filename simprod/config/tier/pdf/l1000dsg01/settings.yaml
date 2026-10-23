@@ -1,1 +1,6 @@
 buffer_len: 500*MB
+
+detector_groups:
+  all: ".*"
+
+fccd_tag_energy_thr_kev: null

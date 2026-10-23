@@ -27,3 +27,4 @@ impurity_curve:
 slices:
   Z:
     detector_offset_in_mm: 112
+    status: valid
