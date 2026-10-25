@@ -1,6 +1,28 @@
 optmap_per_sipm: false
-scintillator_volume_name: liquid_argon_underground
 light_source: optmap
+scintillators:
+  # optical map in paths.optical_maps.lar of the Simflow configuration
+  lar:
+    table: liquid_argon_underground
+    material: lar
+  # dummy parameters, to be replaced by measured or simulated values
+  pen:
+    table: pen
+    material: pen
+    model:
+      function: legendsimflow.opt_models.pen_plates
+      kwargs:
+        prob: 0.02
+  fiber:
+    table: fiber
+    material: fiber
+    model:
+      function: legendsimflow.opt_models.fibers
+      kwargs:
+        amplitudes: [0.01, 0.01, 0.01]
+        absorption_lengths_in_m: [0.05, 0.2, 4]
+        # as in legend-pygeom-l1000
+        fiber_length_in_m: 1.349
 store_expected_pes: true
 optmap_scaling_factor: 1
 photoelectron_resolution_sigma: 0.3
