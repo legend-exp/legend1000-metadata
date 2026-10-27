@@ -1,11 +1,13 @@
+# median of the ICPC fits in l200cfg09/v4.3.0, made with the 48 ns A/E current
+# filter
 default:
   current_pulse_pars:
-    amax: 1250.0
-    mu: 5.0
-    sigma: 45.0
-    tail_fraction: 0.35
-    tau: 150.0
-    high_tail_fraction: 0.10
-    high_tau: 80.0
-  mean_aoe: 0.72
-  current_reso: 4.1
+    amax: 1080.0
+    mu: 20.9 # ns
+    sigma: 57.5 # ns
+    tail_fraction: 0.60
+    tau: 177.0 # ns
+    high_tail_fraction: 0.22
+    high_tau: 66.8 # ns
+  mean_aoe: 0.43
+  current_reso: 4.4

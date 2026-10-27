@@ -1,4 +1,6 @@
+# moving-window average of the A/E current, as in the ICPC DSP configuration of
+# the L200 ref/v3.3.1 production
 curr_mwa:
-  length: 48
-  num_mw: 3
-  mw_type: 0
+  length: 48 # ns
+  num_mw: 3 # number of moving-window passes
+  mw_type: 0 # window type, see dspeed.processors.moving_window_multi

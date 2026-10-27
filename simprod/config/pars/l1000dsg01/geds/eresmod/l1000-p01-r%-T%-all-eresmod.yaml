@@ -1,5 +1,5 @@
 default:
-  expression: FWHMLinear
+  expression: FWHMLinear # FWHM = sqrt(a + b*E), E and FWHM in keV
   parameters:
-    a: 0.5
-    b: 0.001
+    a: 4.2 # keV², median noise term of the ICPCs in L200 tmp/hdb26 (FWHM = 2.05 keV at 0 keV)
+    b: 0.001005 # keV, set so that FWHM = 2.50 keV at 2039 keV

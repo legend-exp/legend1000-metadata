@@ -1,6 +1,8 @@
+# average A/E resolution curve from l200cfg09/v4.3.0, made with the 48 ns A/E
+# current filter. sigma(A/E) = 0.0066 at 2039 keV
 default:
-  expression: SigmaFit
+  expression: SigmaFit # sigma(A/E) = sqrt(a + (b/E)^c), E in keV, A/E normalized to 1
   parameters:
-    a: 0.0001
-    b: 0
-    c: 1
+    a: 2.375e-5
+    b: 29.09 # keV
+    c: 2.543

@@ -1,3 +1,4 @@
+# taken from L200 electronic model fits, made with the 48 ns A/E current filter
 default:
-  sigma: 40.0
-  tau: 150.0
+  sigma: 13.0 # ns
+  tau: 44.0 # ns
