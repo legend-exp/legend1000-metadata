@@ -1,4 +1,7 @@
+# cuts on the A/E classifier (A/E - 1) / sigma(A/E). In l200cfg09/v4.3.0, the
+# 31 ICPCs with a current-pulse model have a median low_side of -1.67 (16-84%:
+# -1.80 to -1.52) and high_side = 3.0
 default:
   aoe:
-    low_side: -1.5
+    low_side: -1.6
     high_side: 3.0
