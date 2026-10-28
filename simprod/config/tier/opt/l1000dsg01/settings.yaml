@@ -10,19 +10,18 @@ scintillators:
     table: pen
     material: pen
     model:
-      function: legendsimflow.opt_models.pen_plates
+      function: legendsimflow.opt_models.uniform
       kwargs:
-        prob: 0.02
+        # summed over all SiPMs
+        prob: 0.12
   fiber:
     table: fiber
     material: fiber
     model:
-      function: legendsimflow.opt_models.fibers
+      function: legendsimflow.opt_models.l1000_fibers
       kwargs:
         amplitudes: [0.01, 0.01, 0.01]
         absorption_lengths_in_m: [0.05, 0.2, 4]
-        # as in legend-pygeom-l1000
-        fiber_length_in_m: 1.349
 store_expected_pes: true
 optmap_scaling_factor: 1
 photoelectron_resolution_sigma: 0.3
