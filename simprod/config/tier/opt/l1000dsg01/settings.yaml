@@ -1,10 +1,38 @@
 optmap_per_sipm: false
-scintillator_volume_name: liquid_argon_underground
 light_source: optmap
-store_expected_pes: true
+
+scintillators:
+  lar:
+    table: liquid_argon_underground
+    material: lar
+  # collection efficiencies derived from full optical simulations (background
+  # modeling & simulations call, 19.10.2026)
+  pen:
+    table: pen
+    material: pen
+    model:
+      function: legendsimflow.opt_models.uniform
+      kwargs:
+        # average over all plates, without the bottom row
+        prob: 0.0045
+  fiber:
+    table: fiber
+    material: fiber
+    model:
+      function: legendsimflow.opt_models.l1000_fibers
+      kwargs:
+        # fit to the detection probability of a module against height
+        amplitudes: [0.0121, 0.0018, 0.0115]
+        absorption_lengths_in_m: [0.0064, 0.078, 2.37]
+
+# the optmap l1000dsg01-ular-optmap-v1.lh5 uses the pygeom-optics PDE
 optmap_scaling_factor: 1
+store_expected_pes: true
+
 photoelectron_resolution_sigma: 0.3
 time_resolution_in_ns: 16
+
 max_pes_per_hit_per_sipm: 5
 max_pes_per_hit_combined: 100
+
 buffer_len: 10*MB
