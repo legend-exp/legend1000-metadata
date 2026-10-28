@@ -1,4 +1,4 @@
-optmap_per_sipm: true
+optmap_per_sipm: false
 scintillator_volume_name: liquid_argon_underground
 light_source: optmap
 store_expected_pes: true
