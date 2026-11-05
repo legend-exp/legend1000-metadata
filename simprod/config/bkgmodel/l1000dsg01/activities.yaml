@@ -1,90 +1,93 @@
 cables:
   description: Cabling - HV & Signal
-  reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 0.4
+  reference:
+    Arnquist et al., EPJ Techn. Instrum. 10, 17 (2023); R. Saldanha (PNNL), 2026
+  mass_in_kg: 3.0
   specific_activity_in_uBq_per_kg:
-    cables_Pb214_to_Po214: { val: 107, unc: 45 }
-    cables_Pb212_to_Pb208: { val: 81, unc: 57 }
+    cables_Pb214_to_Po214: { val: 386, unc: 25 }
+    cables_Pb212_to_Pb208: { val: 53, unc: 12 }
 
 detector_mount_efcu:
   description: Detector Mount (EFCu)
   reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 33.8
+  mass_in_kg: 25.0
   specific_activity_in_uBq_per_kg:
     hpge_support_copper_Pb214_to_Po214: { val: 0.19, unc: 0.10 }
     hpge_support_copper_Pb212_to_Pb208: { val: 0.37, unc: 0.22 }
 
 detector_mount_ultem:
   description: Detector Mount (Ultem)
-  reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 0.4
+  reference: L-Note 24-014
+  mass_in_kg: 0.52
   specific_activity_in_uBq_per_kg:
-    ultem_insulators_Pb214_to_Po214: { val: 83, unc: 113 }
+    ultem_insulators_Pb214_to_Po214: { val: 160, unc: 30 }
     ultem_insulators_Pb212_to_Pb208: { val: 140, unc: 20 }
 
 optical_fibers:
   description: Optical Fibers
   reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 15.0
+  mass_in_kg: 17.8
   specific_activity_in_uBq_per_kg:
     fibers_Pb214_to_Po214: { val: 540, unc: 80 }
     fibers_Pb212_to_Pb208: { val: 330, unc: 80 }
 
 front_end_asic:
   description: Front End ASIC
-  reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 0.00013
+  reference: >-
+    F. Edzards et al., Investigation of ASIC-based signal readout electronics
+    for LEGEND-1000, JINST 15, P09022 (2020)
+  mass_in_kg: 0.0111
   specific_activity_in_uBq_per_kg:
-    front_end_electronics_Pb214_to_Po214: { limit: 12000, cl: 0.9 }
-    front_end_electronics_Pb212_to_Pb208: { limit: 8100, cl: 0.9 }
+    front_end_electronics_Pb214_to_Po214: { limit: 2700, cl: 0.9 }
+    front_end_electronics_Pb212_to_Pb208: { limit: 3200, cl: 0.9 }
 
 pen_plates:
   description: PEN Plates (PEN)
   reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 2.0
+  mass_in_kg: 2.35
   specific_activity_in_uBq_per_kg:
     pen_plates_Pb214_to_Po214: { val: 65, unc: 12 }
     pen_plates_Pb212_to_Pb208: { val: 97, unc: 21 }
 
 hv_connector_ultem:
   description: HV Connector (Ultem)
-  reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 0.04
+  reference: L-Note 24-014
+  mass_in_kg: 0.13
   specific_activity_in_uBq_per_kg:
-    hv_clamps_Pb214_to_Po214: { val: 83, unc: 113 }
+    hv_clamps_Pb214_to_Po214: { val: 160, unc: 30 }
     hv_clamps_Pb212_to_Pb208: { val: 140, unc: 20 }
 
 hv_connector_phbr:
   description: HV Connector (Ph-Br)
-  reference: LEGEND-1000 CDR v2.1, Table XVII
+  reference: L-Note 24-014
   mass_in_kg: 0.10
   specific_activity_in_uBq_per_kg:
-    hv_clamps_Pb214_to_Po214: { val: 134, unc: 4 }
-    hv_clamps_Pb212_to_Pb208: { val: 25, unc: 17 }
+    hv_clamps_Pb214_to_Po214: { val: 134, unc: 18 }
+    hv_clamps_Pb212_to_Pb208: { val: 23.7, unc: 2.0 }
 
 fe_mount_ultem:
   description: FE Mount (Ultem)
-  reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 0.08
+  reference: L-Note 24-014
+  mass_in_kg: 0.0
   specific_activity_in_uBq_per_kg:
-    signal_clamps_Pb214_to_Po214: { val: 83, unc: 113 }
+    signal_clamps_Pb214_to_Po214: { val: 160, unc: 30 }
     signal_clamps_Pb212_to_Pb208: { val: 140, unc: 20 }
 
 fe_mount_phbr:
   description: FE Mount (Ph-Br)
-  reference: LEGEND-1000 CDR v2.1, Table XVII
+  reference: L-Note 24-014
   mass_in_kg: 0.10
   specific_activity_in_uBq_per_kg:
-    signal_clamps_Pb214_to_Po214: { val: 134, unc: 4 }
-    signal_clamps_Pb212_to_Pb208: { val: 25, unc: 17 }
+    signal_clamps_Pb214_to_Po214: { val: 134, unc: 18 }
+    signal_clamps_Pb212_to_Pb208: { val: 23.7, unc: 2.0 }
 
 sipms:
   description: SiPMs
-  reference: LEGEND-1000 CDR v2.1, Table XVII
+  reference: P. Krause, PhD thesis, TUM (2023), Table 9.9
   number_of_pieces: 252
   activity_per_piece_in_uBq:
-    sipm_arrays_Pb214_to_Po214: { limit: 0.6, cl: 0.9 }
-    sipm_arrays_Pb212_to_Pb208: { limit: 0.1, cl: 0.9 }
+    sipm_arrays_Pb214_to_Po214: { limit: 20.98, cl: 0.9 }
+    sipm_arrays_Pb212_to_Pb208: { limit: 11.06, cl: 0.9 }
 
 cable_connectors:
   description: Connectors (Various)
@@ -94,29 +97,37 @@ cable_connectors:
     cable_connectors_Pb214_to_Po214: { val: 0.05, unc: 0.09 }
     cable_connectors_Pb212_to_Pb208: { val: 0.07, unc: 0.15 }
 
+neutron_moderator:
+  description: Neutron Moderator (PMMA)
+  reference: LEGEND-1000 CDR v2.1, Table XVII
+  mass_in_kg: 5900
+  specific_activity_in_uBq_per_kg:
+    neutron_moderator_Pb214_to_Po214: { val: 16, unc: 6 }
+    neutron_moderator_Pb212_to_Pb208: { limit: 22, cl: 0.9 }
+
 reentrance_tube_efcu:
   description: RE Vessel (EFCu)
   reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 194
+  mass_in_kg: 231
   specific_activity_in_uBq_per_kg:
     reentrance_tube_efcu_Pb214_to_Po214: { val: 0.19, unc: 0.10 }
     reentrance_tube_efcu_Pb212_to_Pb208: { val: 0.37, unc: 0.22 }
 
 reentrance_tube_ofhc:
   description: RE Vessel (Comm. Cu)
-  reference: LEGEND-1000 CDR v2.1, Table XVII
-  mass_in_kg: 641
+  reference: Abgrall et al., NIM A 828 (2016) 22
+  mass_in_kg: 670
   specific_activity_in_uBq_per_kg:
-    reentrance_tube_ofhc_Pb214_to_Po214: { val: 1250, unc: 370 }
-    reentrance_tube_ofhc_Pb212_to_Pb208: { val: 83, unc: 25 }
+    reentrance_tube_ofhc_Pb214_to_Po214: { val: 1.4, unc: 0.2 }
+    reentrance_tube_ofhc_Pb212_to_Pb208: { val: 1.1, unc: 0.15 }
 
 wls_reflector:
   description: Reflectors (Tetratex/TPB)
-  reference: LEGEND-1000 CDR v2.1, Table XVII
-  area_in_m2: 36
+  reference: L-Note 24-014
+  area_in_m2: 26
   specific_activity_in_uBq_per_m2:
     wls_reflector_Pb214_to_Po214: { val: 78, unc: 30 }
-    wls_reflector_Pb212_to_Pb208: { limit: 12, cl: 0.9 }
+    wls_reflector_Pb212_to_Pb208: { limit: 92, cl: 0.9 }
 
 hpge_detectors:
   description: Ge detector material
@@ -127,3 +138,11 @@ hpge_detectors:
   specific_activity_in_uBq_per_kg:
     hpge_icpc_bulk_Pb214_to_Po214: { limit: 0.001, cl: 0.9 }
     hpge_icpc_bulk_Pb212_to_Pb208: { limit: 0.001, cl: 0.9 }
+
+cryostat_steel:
+  description: Cryostat (stainless steel)
+  reference: B. Schwingenheuer & C. Wiesinger, L.CS review, 22 Jul 2026, p. 9
+  mass_in_kg: 84800
+  specific_activity_in_uBq_per_kg:
+    cryostat_Pb214_to_Po214: { val: 1840, unc: 120 }
+    cryostat_Pb212_to_Pb208: { val: 880, unc: 80 }
