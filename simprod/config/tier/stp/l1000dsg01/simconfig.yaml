@@ -254,3 +254,17 @@ hpge_support_copper_Co60:
   confinement: ~volumes.bulk:hpge_string_support_.*_copper_.*
   primaries_per_job: 650_000
   number_of_jobs: 154
+
+muon_hall_c:
+  template: $_/templates/muon.mac
+  generator: ~vertices:musun_hall_c
+  primaries_per_job: 1000
+  number_of_jobs: 1
+  geom_config_extra:
+    # with cavern, water tank and PMTs
+    detail: cosmogenic
+    # optical properties only for the water Cherenkov veto: water + PMT glass
+    enable_optical: [water, borosilicate]
+  macro_substitutions:
+    HADRONIC_PHYSICS: Shielding
+    STAGING_DIR: /pscratch/sd/m/moritzn/remage_staging
