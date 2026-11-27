@@ -9,3 +9,9 @@ hpge_pplus_surface:
     revertex hpge-surf-pos --detectors V* --surface-type pplus --gdml
     {GDML_FILE} --out-file {OUTPUT_FILE} --n-events {N_EVENTS}
   product: positions
+
+musun_hall_c:
+  command: >-
+    revertex musun-gs --out-file {OUTPUT_FILE} --n-events {N_EVENTS}
+    --default-dimensions hall_c
+  product: kinematics_and_positions

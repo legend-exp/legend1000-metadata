@@ -1,0 +1,71 @@
+/RMG/Manager/Randomization/Seed {SEED}
+
+/RMG/Geometry/RegisterDetectorsFromGDML Germanium
+/RMG/Geometry/RegisterDetectorsFromGDML Optical
+# energy steps in the liquid argon (the GDML also marks the water as scintillator, not used here)
+/RMG/Geometry/RegisterDetector Scintillator liquid_argon_atmospheric 10000
+/RMG/Geometry/RegisterDetector Scintillator liquid_argon_underground 10001
+# energy steps in the PEN plates and in the (scintillating) fiber cores
+/RMG/Geometry/RegisterDetector Scintillator hpge_assembly_plate_pen_.* 10003 0 true pen_plates
+/RMG/Geometry/RegisterDetector Scintillator fiber_core_.* 10004 0 true fiber_cores
+/RMG/Geometry/GDMLDisableOverlapCheck
+
+/RMG/Processes/HadronicPhysics $HADRONIC_PHYSICS
+
+# Cherenkov light in the water tank (only water and PMT glass have optical properties)
+/RMG/Processes/OpticalPhysics true
+
+# name tables with ntuple
+/RMG/Output/NtupleUseVolumeName true
+
+# staging of optical photons and electrons, conditioned on Ge77 production
+/RMG/Output/ActivateOutputScheme Staging
+/RMG/Output/ActivateOutputScheme IsotopeFilter
+
+# physics options
+/RMG/Processes/EnableGammaAngularCorrelation true
+
+/run/initialize
+
+# to have event-by-event energy conservation even if not entirely physically correct
+/process/had/particle_hp/use_photo_evaporation true
+
+# recommended according to https://geant4-userdoc.web.cern.ch/UsersGuides/ForApplicationDeveloper/html/TrackingAndPhysics/physicsProcess.html?highlight=particle_hp#high-precision-neutron-interactions-neutronhp
+/process/had/particle_hp/do_not_adjust_final_state true
+/process/had/particle_hp/skip_missing_isotopes true
+
+# store everything in single precision
+/RMG/Output/Germanium/StoreSinglePrecisionPosition
+/RMG/Output/Germanium/StoreSinglePrecisionEnergy
+/RMG/Output/Scintillator/StoreSinglePrecisionPosition
+/RMG/Output/Scintillator/StoreSinglePrecisionEnergy
+/RMG/Output/Vertex/StoreSinglePrecisionPosition
+
+# store trackid
+/RMG/Output/Germanium/StoreTrackID true
+/RMG/Output/Scintillator/StoreTrackID true
+
+# defer optical photons to stage 1, spill the records to disk
+/RMG/Staging/OpticalPhotons/DeferToWaitingStage true
+/RMG/Staging/OpticalPhotons/RMGDeferring true
+/RMG/Staging/OpticalPhotons/StorePath $STAGING_DIR
+/RMG/Staging/OpticalPhotons/LimitMemory 512
+
+# defer e-/e+ below 8 MeV (~ neutron separation energy: they make no neutrons)
+/RMG/Staging/Electrons/DeferToWaitingStage true
+/RMG/Staging/Electrons/RMGDeferring true
+/RMG/Staging/Electrons/StorePath $STAGING_DIR
+/RMG/Staging/Electrons/LimitMemory 128
+/RMG/Staging/Electrons/IncludePositrons true
+/RMG/Staging/Electrons/MaxEnergyThresholdForStacking 8.0 MeV
+/RMG/Staging/Electrons/SuspendOnEnergyDrop true
+
+# keep only events with Ge77, track the staged particles only in these events
+/RMG/Output/IsotopeFilter/AddIsotope 77 32
+/RMG/Output/IsotopeFilter/DiscardWaitingTracksUnlessIsotopeProduced true
+
+$GENERATOR
+
+$CONFINEMENT
+
+/run/beamOn {N_EVENTS}
